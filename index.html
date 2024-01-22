@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordin Application</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Poppins, sans-serif;
+        }
+        .warp{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .para{
+            width: 50%;
+        }
+        .s-para{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: rgb(84, 84, 250);
+            border-radius: 10px 10px 0 0;
+            color: white;
+        }
+        .sign{
+            rotate: 45deg;
+            cursor: pointer;
+        }
+        .desc{
+            color: white;
+            background-color: rgba(0, 0, 0, 0.575);
+            padding: 10px 20px;
+            display: none;
+            text-align: justify;
+            border-radius: 0 0 10px 10px;
+            transition: all 2s ease;
+        }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+    </style>
+</head>
+<body>
+    <div class="warp">
+        <div class="para">
+            <div class="s-para">
+                <p class="que">Lorem ipsum dolor sit, amet consectetur adipisicing elit?</p>
+                <p class="sign">❌</p>
+            </div>
+            <div class="desc">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, atque ab! Excepturi, magni sit! Voluptas, adipisci nesciunt rem facere, eum commodi magni harum laboriosam quam quis, quibusdam similique provident? Quis. <br>
+                Voluptas, adipisci nesciunt rem facere, eum commodi magni harum laboriosam quam quis, quibusdam similique provident? Quis.
+            </div>
+        </div>
+    </div>
+    <script>
+        const para = document.querySelector('.para');
+        const sign = document.querySelector('.sign');
+        const desc = document.querySelector('.desc');
+        const operation = sign.addEventListener('click',function show(){
+            if(desc.style.display==="none"){
+                desc.style.display="block";
+                sign.style.rotate = "90deg";
+            }
+            else{
+                desc.style.display="none";
+                sign.style.rotate = "45deg";
+            }
+        })
+    </script>
+</body>
+</html>
